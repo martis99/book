@@ -1,7 +1,7 @@
 # Disk
 
 Reading from disk
-```asm
+```armasm
 mov [BOOT_DISK], dl  ; BIOS stores disk number that program was loaded from to dl
 
 mov ax, 0x0240       ; function (0x02 = read), 65 sectors
