@@ -1,6 +1,6 @@
 # Print
 
-Printing
+Printing example
 ```armasm
 mov ah, 0x0E  ; set function to display char
 mov al, 'H'   ; set char to 'H'

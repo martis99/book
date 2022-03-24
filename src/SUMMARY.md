@@ -10,5 +10,7 @@
     - [BIOS](os/16-bit/bios/README.md)
       - [Print](os/16-bit/bios/print.md)
       - [Disk](os/16-bit/bios/disk.md)
+    - [GDT](os/16-bit/gdt.md)
+    - [PM](os/16-bit/pm.md)
   - [32-bit](ps/32-bit/README.md)
   - [64-bit](os/64-bit/README.md)
