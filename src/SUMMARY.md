@@ -2,6 +2,7 @@
 
 -   [Introduction](README.md)
 -   [Book](book.md)
+-   [Git](git/README.md)
 -   [OS](os/README.md)
     -   [Linux](os/linux/README.md)
         -   [Kernel](os/linux/kernel.md)
@@ -16,6 +17,7 @@
             -   [PM](os/from-scratch/16-bit/pm.md)
         -   [32-bit](ps/from-scratch/32-bit/README.md)
         -   [64-bit](os/from-scratch/64-bit/README.md)
+    -   [OpenWrt](os/openwrt/README.md)
 -   [Programming Languages](programming-languages/README.md)
     -   [Assembler](programming-languages/assembler/README.md)
     -   [C](programming-languages/c/README.md)
