@@ -2,7 +2,7 @@
 
 The OpenWrt Project is a Linux operating system targeting embedded devices.
 
--   [Getting Started](getting-started.md)
+-   [Getting Started](getting-started/README.md)
 
 ## References
 
