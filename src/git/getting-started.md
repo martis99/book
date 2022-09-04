@@ -1,6 +1,9 @@
 # Getting Started
 
-1. Download Git from: [https://git-scm.com/downloads](https://git-scm.com/downloads)
+1. Download Git from: [https://git-scm.com/downloads](https://git-scm.com/downloads) or on Debian/Ubuntu
+```
+sudo apt install git
+```
 2. Generate SSH key
 ```
 ssh-keygen -t ed25519 -C "your_email@example.com"
@@ -8,7 +11,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 3. Go into your repository hosting service and create new ssh key
     -   GitHub: [https://github.com/settings/ssh/new](https://github.com/settings/ssh/new)
 4. Copy generated public SSH key from `/home/you/.ssh/id_ed25519.pub` to ssh key field
-5. Create file `.gitconfig` in `/home/you` directory and paste provided text below with your information
+5. Create `.gitconfig` file in `/home/you` directory and paste provided text below with your information
 ```
 [user]
 name = your_name
