@@ -1,0 +1,510 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="book.html"><strong aria-hidden="true">2.</strong> Book</a></li><li class="chapter-item expanded "><a href="git/index.html"><strong aria-hidden="true">3.</strong> Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git/getting-started.html"><strong aria-hidden="true">3.1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="git/remove-last-remote-commit.html"><strong aria-hidden="true">3.2.</strong> Remove last remote commit</a></li></ol></li><li class="chapter-item expanded "><a href="os/index.html"><strong aria-hidden="true">4.</strong> OS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="os/linux/index.html"><strong aria-hidden="true">4.1.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="os/linux/kernel.html"><strong aria-hidden="true">4.1.1.</strong> Kernel</a></li><li class="chapter-item expanded "><a href="os/linux/bootloader.html"><strong aria-hidden="true">4.1.2.</strong> Bootloader</a></li><li class="chapter-item expanded "><a href="os/linux/file-system.html"><strong aria-hidden="true">4.1.3.</strong> File System</a></li></ol></li><li class="chapter-item expanded "><a href="os/from-scratch/index.html"><strong aria-hidden="true">4.2.</strong> From scratch</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="os/from-scratch/16-bit/index.html"><strong aria-hidden="true">4.2.1.</strong> 16-bit</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="os/from-scratch/16-bit/bios/index.html"><strong aria-hidden="true">4.2.1.1.</strong> BIOS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="os/from-scratch/16-bit/bios/print.html"><strong aria-hidden="true">4.2.1.1.1.</strong> Print</a></li><li class="chapter-item expanded "><a href="os/from-scratch/16-bit/bios/disk.html"><strong aria-hidden="true">4.2.1.1.2.</strong> Disk</a></li></ol></li><li class="chapter-item expanded "><a href="os/from-scratch/16-bit/gdt.html"><strong aria-hidden="true">4.2.1.2.</strong> GDT</a></li><li class="chapter-item expanded "><a href="os/from-scratch/16-bit/pm.html"><strong aria-hidden="true">4.2.1.3.</strong> PM</a></li></ol></li><li class="chapter-item expanded "><a href="ps/from-scratch/32-bit/index.html"><strong aria-hidden="true">4.2.2.</strong> 32-bit</a></li><li class="chapter-item expanded "><a href="os/from-scratch/64-bit/index.html"><strong aria-hidden="true">4.2.3.</strong> 64-bit</a></li></ol></li><li class="chapter-item expanded "><a href="os/openwrt/index.html"><strong aria-hidden="true">4.3.</strong> OpenWrt</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="os/openwrt/getting-started/index.html"><strong aria-hidden="true">4.3.1.</strong> Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="os/openwrt/getting-started/qemu/index.html"><strong aria-hidden="true">4.3.1.1.</strong> QEMU</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="os/ubuntu/index.html"><strong aria-hidden="true">4.4.</strong> Ubuntu</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="os/ubuntu/add-to-favorites.html"><strong aria-hidden="true">4.4.1.</strong> Add to Favorites</a></li><li class="chapter-item expanded "><a href="os/ubuntu/terminator.html"><strong aria-hidden="true">4.4.2.</strong> Terminator</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="programming-languages/index.html"><strong aria-hidden="true">5.</strong> Programming Languages</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="programming-languages/assembler/index.html"><strong aria-hidden="true">5.1.</strong> Assembler</a></li><li class="chapter-item expanded "><a href="programming-languages/c/index.html"><strong aria-hidden="true">5.2.</strong> C</a></li><li class="chapter-item expanded "><a href="programming-languages/c++/index.html"><strong aria-hidden="true">5.3.</strong> C++</a></li><li class="chapter-item expanded "><a href="programming-languages/c-sharp/index.html"><strong aria-hidden="true">5.4.</strong> C#</a></li><li class="chapter-item expanded "><a href="programming-languages/java/index.html"><strong aria-hidden="true">5.5.</strong> Java</a></li><li class="chapter-item expanded "><a href="programming-languages/python/index.html"><strong aria-hidden="true">5.6.</strong> Python</a></li><li class="chapter-item expanded "><a href="programming-languages/javascript/index.html"><strong aria-hidden="true">5.7.</strong> JavaScript</a></li><li class="chapter-item expanded "><a href="programming-languages/php/index.html"><strong aria-hidden="true">5.8.</strong> PHP</a></li></ol></li><li class="chapter-item expanded "><a href="rendering/index.html"><strong aria-hidden="true">6.</strong> Rendering</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rendering/apis/index.html"><strong aria-hidden="true">6.1.</strong> APIs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rendering/apis/opengl/index.html"><strong aria-hidden="true">6.1.1.</strong> OpenGL</a></li><li class="chapter-item expanded "><a href="rendering/apis/direct3d/index.html"><strong aria-hidden="true">6.1.2.</strong> Direct3D</a></li><li class="chapter-item expanded "><a href="rendering/apis/vulkan/index.html"><strong aria-hidden="true">6.1.3.</strong> Vulkan</a></li><li class="chapter-item expanded "><a href="rendering/apis/metal/index.html"><strong aria-hidden="true">6.1.4.</strong> Metal</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="book"><a class="header" href="#book">Book</a></h1>
+<p>This book was created using <a href="https://github.com/rust-lang/mdBook">mdBook</a>.</p>
+<p>Bare minimum mdBook project <a href="https://github.com/martis99/mdbook-template">template</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git"><a class="header" href="#git">Git</a></h1>
+<p>Git is a free and open source distributed version control system.</p>
+<ul>
+<li><a href="git/getting-started.html">Getting Started</a></li>
+<li><a href="git/remove-last-remote-commit.html">Remove last remove commit</a></li>
+</ul>
+<h2 id="references"><a class="header" href="#references">References</a></h2>
+<ul>
+<li><a href="https://git-scm.com/">git</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h1>
+<ol>
+<li>Download Git from: <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a> or on Debian/Ubuntu</li>
+</ol>
+<pre><code>sudo apt install git
+</code></pre>
+<ol start="2">
+<li>Generate SSH key</li>
+</ol>
+<pre><code>ssh-keygen -t ed25519 -C &quot;your_email@example.com&quot;
+</code></pre>
+<ol start="3">
+<li>Go into your repository hosting service and create new ssh key
+<ul>
+<li>GitHub: <a href="https://github.com/settings/ssh/new">https://github.com/settings/ssh/new</a></li>
+</ul>
+</li>
+<li>Copy generated public SSH key from <code>/home/you/.ssh/id_ed25519.pub</code> to ssh key field</li>
+<li>Create <code>.gitconfig</code> file in <code>/home/you</code> directory and paste provided text below with your information</li>
+</ol>
+<pre><code>[user]
+name = your_name
+mail = your_email@example.com
+email = your_email@example.com
+[alias]
+find-merge = &quot;!sh -c 'commit=$0 &amp;&amp; branch=${1:-HEAD} &amp;&amp; (git rev-list $commit..$branch --ancestry-path | cat -n; git rev-list $commit..$branch --first-parent | cat -n) | sort -k2 -s | uniq -f1 -d | sort -n |  tail -1 | cut -f2'&quot;
+show-merge = &quot;!sh -c 'merge=$(git find-merge $0 $1) &amp;&amp; [ -n \&quot;$merge\&quot; ] &amp;&amp; git show $merge'&quot;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="remove-last-remote-commit"><a class="header" href="#remove-last-remote-commit">Remove last remote commit</a></h1>
+<ol>
+<li>Remove commit locally</li>
+</ol>
+<pre><code>git reset --soft HEAD^
+</code></pre>
+<ol start="2">
+<li>Force push to remote repository</li>
+</ol>
+<pre><code>git push origin +branch_name --force
+</code></pre>
+<ol start="3">
+<li>If you need to delete made changes in commit</li>
+</ol>
+<pre><code>git reset --hard
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="os"><a class="header" href="#os">OS</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="linux"><a class="header" href="#linux">Linux</a></h1>
+<h2 id="references-1"><a class="header" href="#references-1">References</a></h2>
+<ul>
+<li><a href="https://elinux.org">eLinux</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="kernel"><a class="header" href="#kernel">Kernel</a></h1>
+<h2 id="next-steps"><a class="header" href="#next-steps">Next Steps</a></h2>
+<p><a href="os/linux/bootloader.html">Bootloader</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bootloader"><a class="header" href="#bootloader">Bootloader</a></h1>
+<h2 id="next-steps-1"><a class="header" href="#next-steps-1">Next Steps</a></h2>
+<p><a href="os/linux/file-system.html">File System</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="file-system"><a class="header" href="#file-system">File system</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="from-scratch"><a class="header" href="#from-scratch">From scratch</a></h1>
+<h2 id="references-2"><a class="header" href="#references-2">References</a></h2>
+<ul>
+<li><a href="https://wiki.osdev.org/">OSDev Wiki</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="16-bit"><a class="header" href="#16-bit">16-bit</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bios-basic-inputoutput-system"><a class="header" href="#bios-basic-inputoutput-system">BIOS (Basic Input/Output System)</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="print"><a class="header" href="#print">Print</a></h1>
+<p>Printing example</p>
+<pre><code class="language-armasm">mov ah, 0x0E  ; set function to display char
+mov al, 'H'   ; set char to 'H'
+int 0x10      ; display
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="disk"><a class="header" href="#disk">Disk</a></h1>
+<p>Reading from disk example</p>
+<pre><code class="language-armasm">mov [BOOT_DISK], dl  ; BIOS stores disk number that program was loaded from to dl
+
+mov ax, 0x0240       ; function (0x02 = read), 64 sectors
+mov bx, 0x8000       ; write data to 0x8000
+mov cx, 0x0002       ; read from cylinder: 0, sector: 2
+mov dl, [BOOT_DISK]  ; read from boot disk
+xor dh, dh           ; read from head 0
+int 0x13             ; read data
+jc Error             ; if read failed jump to Error
+
+Error:
+    jmp $            ; jump to current line (loop forever)
+
+BOOT_DISK db 0
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="gdt-global-descriptor-table"><a class="header" href="#gdt-global-descriptor-table">GDT (Global Descriptor Table)</a></h1>
+<p>GDT Example</p>
+<pre><code class="language-armasm">gdt_start:
+    dd 0x0
+    dd 0x0
+
+gdt_code:
+    dw 0xFFFF    ; segment length, bits 0-15
+    dw 0x0       ; segment base, bits 0-15
+    db 0x0       ; segment base, bits 16-23
+    db 10011010b ; flags (8 bits)
+    db 11001111b ; flags (4 bits) + segment length, bits 16-19
+    db 0x0       ; segment base, bits 24-31
+
+gdt_data:
+    dw 0xFFFF
+    dw 0x0
+    db 0x0
+    db 10010010b
+    db 11001111b
+    db 0x0
+
+gdt_end:
+
+gdt_descriptor:
+    dw gdt_end - gdt_start - 1 ; size (16 bit), always one less of its true size
+    dd gdt_start               ; address (32 bit)
+
+CODE_SEG equ gdt_code - gdt_start
+DATA_SEG equ gdt_data - gdt_start
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pm-protected-mode"><a class="header" href="#pm-protected-mode">PM (Protected Mode)</a></h1>
+<p>Protected mode example</p>
+<pre><code class="language-armasm">cli                   ; disable interrupts
+lgdt [gdt_descriptor] ; load the GDT descriptor
+mov eax, cr0
+or eax, 0x1           ; set PE (Protection Enable) bit in CR0 (Control Register 0)
+mov cr0, eax
+jmp CODE_SEG:init_pm  ; far jump into GDT, pointing at a 32-bit PM code segment descriptor
+
+[bits 32]
+init_pm:
+    mov ax, DATA_SEG
+                      ; CS register is filled with proper segment values by jump
+    mov ds, ax        ; Data Segment
+    mov es, ax
+    mov fs, ax
+    mov gs, ax
+    mov ss, ax        ; Stack Segment
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="32-bit"><a class="header" href="#32-bit">32-bit</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="64-bit"><a class="header" href="#64-bit">64-bit</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="openwrt"><a class="header" href="#openwrt">OpenWrt</a></h1>
+<p>The OpenWrt Project is a Linux operating system targeting embedded devices.</p>
+<ul>
+<li><a href="os/openwrt/getting-started/index.html">Getting Started</a></li>
+</ul>
+<h2 id="references-3"><a class="header" href="#references-3">References</a></h2>
+<ul>
+<li><a href="https://openwrt.org/">OpenWrt</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="getting-started-1"><a class="header" href="#getting-started-1">Getting Started</a></h1>
+<ol>
+<li>Clone OpenWrt repository</li>
+</ol>
+<pre><code>git clone git://git.openwrt.org/openwrt/openwrt.git openwrt
+</code></pre>
+<ol start="2">
+<li>Setup OpenWrt for your target system
+<ul>
+<li><a href="os/openwrt/getting-started/qemu/index.html">QEMU</a></li>
+</ul>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="openwrt-setup-for-qemu"><a class="header" href="#openwrt-setup-for-qemu">OpenWrt setup for QEMU</a></h1>
+<ol>
+<li>Download qemu-system-mips</li>
+</ol>
+<pre><code>sudo apt install qemu-system-mips
+</code></pre>
+<ol start="2">
+<li>Configure OpenWrt for qemu
+<ol>
+<li>Open configuration menu</li>
+</ol>
+<pre><code>make menuconfig
+</code></pre>
+<ol start="2">
+<li>Specify target system as MIPS by selecting <code>Target System -&gt; MIPS Malta CoreLV board (qemu)</code></li>
+<li>Specify image format as ext4 by selecting <code>Target Images -&gt; ext4</code></li>
+</ol>
+</li>
+<li>Compile</li>
+</ol>
+<pre><code>make -j$(nproc)
+</code></pre>
+<ol start="4">
+<li>Copy generated filesystem and image to qemu run directory</li>
+</ol>
+<pre><code>mkdir qemu
+cp bin/targets/malta/le/openwrt-malta-le-rootfs-ext4.img qemu
+cp bin/targets/malta/le/openwrt-malta-le-vmlinux.elf qemu
+</code></pre>
+<ol start="5">
+<li>Run qemu</li>
+</ol>
+<pre><code>cd qemu
+sudo qemu-system-mipsel -M malta -hda openwrt-malta-le-rootfs-ext4.img -kernel openwrt-malta-le-vmlinux.elf -nographic -append &quot;root=/dev/sda console=ttyS0&quot;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ubuntu"><a class="header" href="#ubuntu">Ubuntu</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="add-to-favorites"><a class="header" href="#add-to-favorites">Add to Favorites</a></h1>
+<p>To add App to Favorites create <code>.desktop</code> file in <code>~/.local/share/applications/</code>.</p>
+<p>Example of <code>.desktop</code> file</p>
+<pre><code>[Desktop Entry]
+Name=Terminator
+Comment=Multiple terminals in one window
+Exec=terminator
+Icon=terminator
+Type=Application
+Categories=GNOME;GTK;Utility;TerminalEmulator;System;
+StartupNotify=true
+X-Ubuntu-Gettext-Domain=terminator
+X-Ayatana-Desktop-Shortcuts=NewWindow;
+Keywords=terminal;shell;prompt;command;commandline;
+[NewWindow Shortcut Group]
+Name=Open a New Window
+Exec=terminator
+TargetEnvironment=Unity
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="terminator"><a class="header" href="#terminator">Terminator</a></h1>
+<p>To install <code>Terminator</code> app run <code>sudo apt install terminator</code></p>
+<p>To create custom terminator layout: <code>Right click in terminal background -&gt; Preferences -&gt; Layouts -&gt; Add</code></p>
+<p>Or if more control is needed edit <code>~/.config/terminator/config</code> file</p>
+<p>Example of <code>config</code> file</p>
+<pre><code>[global_config]
+  case_sensitive = False
+[keybindings]
+[profiles]
+  [[default]]
+    cursor_color = &quot;#aaaaaa&quot;
+    foreground_color = &quot;#ffffff&quot;
+    show_titlebar = False
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[child0]]]
+      type = Window
+      parent = &quot;&quot;
+      order = 0
+      maximised = False
+      fullscreen = False
+    [[[terminal1]]]
+      type = Terminal
+      parent = child0
+      order = 0
+      profile = default
+[plugins]
+</code></pre>
+<p>To add new layout add new entry in <code>[layouts]</code> with name of your layout <code>[[&lt;name&gt;]]</code></p>
+<p>Example of 4 windows terminal layout</p>
+<pre><code>  [[four]]
+    [[[child0]]]
+      type = Window
+      parent = &quot;&quot;
+      order = 0
+      maximised = True
+      fullscreen = False
+    [[[child1]]]
+      type = HPaned
+      parent = child0
+      order = 0
+      position = 922
+    [[[child2]]]
+      type = VPaned
+      parent = child1
+      order = 0
+      position = 519
+    [[[terminal3]]]
+      type = Terminal
+      parent = child2
+      order = 0
+      profile = default
+    [[[terminal4]]]
+      type = Terminal
+      parent = child2
+      order = 1
+      profile = default
+    [[[child5]]]
+      type = VPaned
+      parent = child1
+      order = 1
+      position = 521
+    [[[terminal6]]]
+      type = Terminal
+      parent = child5
+      order = 0
+      profile = default
+    [[[terminal7]]]
+      type = Terminal
+      parent = child5
+      order = 1
+      profile = default
+</code></pre>
+<p>To start terminal with custom layout run <code>terminator -l &lt;name&gt;</code></p>
+<p>To add terminator to Favorites with your custom layout add <code>.desktop</code> file in <code>~/.local/share/applications/</code></p>
+<p>Example of <code>.desktop</code> file</p>
+<pre><code>[Desktop Entry]
+Name=Terminator
+Comment=Multiple terminals in one window
+Exec=terminator -l &lt;name&gt;
+Icon=terminator
+Type=Application
+Categories=GNOME;GTK;Utility;TerminalEmulator;System;
+StartupNotify=true
+X-Ubuntu-Gettext-Domain=terminator
+X-Ayatana-Desktop-Shortcuts=NewWindow;
+Keywords=terminal;shell;prompt;command;commandline;
+[NewWindow Shortcut Group]
+Name=Open a New Window
+Exec=terminator
+TargetEnvironment=Unity
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="programming-languages"><a class="header" href="#programming-languages">Programming Languages</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="assembler"><a class="header" href="#assembler">Assembler</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="c"><a class="header" href="#c">C</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="c-1"><a class="header" href="#c-1">C++</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="c-2"><a class="header" href="#c-2">C#</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="java"><a class="header" href="#java">Java</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="python"><a class="header" href="#python">Python</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="javascript"><a class="header" href="#javascript">JavaScript</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="php"><a class="header" href="#php">PHP</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rendering"><a class="header" href="#rendering">Rendering</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rendering-apis"><a class="header" href="#rendering-apis">Rendering APIs</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="opengl"><a class="header" href="#opengl">OpenGL</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="direct3d"><a class="header" href="#direct3d">Direct3D</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vulkan"><a class="header" href="#vulkan">Vulkan</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="metal"><a class="header" href="#metal">Metal</a></h1>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>
